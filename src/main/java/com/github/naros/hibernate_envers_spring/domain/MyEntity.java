@@ -6,11 +6,11 @@
  */
 package com.github.naros.hibernate_envers_spring.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 import org.hibernate.envers.Audited;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 /**
  * @author Chris Cranford

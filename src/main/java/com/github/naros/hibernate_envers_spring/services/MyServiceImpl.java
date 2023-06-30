@@ -6,9 +6,9 @@
  */
 package com.github.naros.hibernate_envers_spring.services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import org.jboss.logging.Logger;
 
 /**
  * @author Chris Cranford
@@ -16,10 +16,10 @@ import org.jboss.logging.Logger;
 @Service
 public class MyServiceImpl implements MyService {
 
-	private static final Logger LOGGER = Logger.getLogger( MyServiceImpl.class );
+	private static final Logger LOGGER = LoggerFactory.getLogger(MyServiceImpl.class);
 
 	@Override
 	public void doSomething() {
-		LOGGER.info( "*** doSomething() called successfully" );
+		LOGGER.info("*** doSomething() called successfully");
 	}
 }

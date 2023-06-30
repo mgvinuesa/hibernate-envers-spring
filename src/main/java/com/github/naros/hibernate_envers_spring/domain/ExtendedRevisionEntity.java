@@ -6,10 +6,10 @@
  */
 package com.github.naros.hibernate_envers_spring.domain;
 
-import javax.persistence.Entity;
-
 import org.hibernate.envers.DefaultRevisionEntity;
 import org.hibernate.envers.RevisionEntity;
+
+import jakarta.persistence.Entity;
 
 /**
  * @author Chris Cranford
@@ -18,5 +18,6 @@ import org.hibernate.envers.RevisionEntity;
 @RevisionEntity(value = ExtendedRevisionListener.class)
 public class ExtendedRevisionEntity extends DefaultRevisionEntity {
 	// just marker entity to point to listener
-	// can accomplish the same by explicitly setting up listener in bootstrap properties
+	// can accomplish the same by explicitly setting up listener in bootstrap
+	// properties
 }

@@ -7,9 +7,9 @@
 package com.github.naros.hibernate_envers_spring.domain;
 
 import org.hibernate.envers.RevisionListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import org.jboss.logging.Logger;
 
 import com.github.naros.hibernate_envers_spring.services.MyService;
 
@@ -18,7 +18,7 @@ import com.github.naros.hibernate_envers_spring.services.MyService;
  */
 public class ExtendedRevisionListener implements RevisionListener {
 
-	private static final Logger LOGGER = Logger.getLogger(ExtendedRevisionListener.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ExtendedRevisionListener.class);
 
 	@Autowired
 	private MyService myService;
@@ -34,8 +34,7 @@ public class ExtendedRevisionListener implements RevisionListener {
 			LOGGER.info("MyService was injected successfully");
 			myService.doSomething();
 			return;
-		}
-		else {
+		} else {
 			LOGGER.error("MyService was not injected.");
 		}
 	}
