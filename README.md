@@ -1,4 +1,4 @@
-# Hibernate Envers + Spring 5.1 Demo
+# Hibernate Envers + Spring Boot 3.1 Demo
 
 This demo is primarily aimed to illustrate the `ManagedBeanRegistry` support that Spring Framework added in version 5.1 to support injecting Spring beans into a Hibernate Envers `RevisionListener` implementation.
 
@@ -94,3 +94,8 @@ public class ExtendedRevisionEntity extends DefaultRevisionEntity {
 	// can accomplish the same by explicitly setting up listener in bootstrap properties
 }
 ```
+
+# Hibernate Issue
+I forked this demo to open the following issue
+
+https://hibernate.atlassian.net/browse/HHH-16881
